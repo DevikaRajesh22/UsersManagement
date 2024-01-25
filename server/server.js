@@ -6,14 +6,14 @@ const userRoute = require('./routes/userRoutes');
 const adminRoute = require('./routes/adminRoutes');
 const connectDB = require('./config/db');
 
-dotenv.config()
-connectDB()
-const app = express()
-const port = 3000
+dotenv.config();
+connectDB();
+const app = express();
+const port = process.env.PORT||5000;
 
 
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 
 app.use(
   cors({
