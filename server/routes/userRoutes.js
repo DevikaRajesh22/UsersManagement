@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const UserController = require('../controllers/UserController');
+const {login,register,logout,profile,updateProfile} = require('../controllers/userController.js');
 
-router.post('/signup', UserController.signup);
-router.post('/login', UserController.login);
-// Add more routes for CRUD operations
+router.post('/login', login);
+router.post('/register',register);
+router.get('/logout',logout);
+router.get('/profile',profile);
+router.put('/updateProfile',updateProfile);
 
 module.exports = router;

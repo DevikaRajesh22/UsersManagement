@@ -1,0 +1,55 @@
+/* userView.css */
+
+.user-list {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center-align child elements */
+  }
+  
+  .user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .user-card span {
+    flex-grow: 1;
+    text-align: left; /* Left-align the user names */
+  }
+  
+  .options {
+    display: flex;
+  }
+  
+  .edit-icon,
+  .delete-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  
+  .edit-icon:hover,
+  .delete-icon:hover {
+    color: #2196F3; /* Edit and delete icon color on hover */
+  }
+  
+  .add-user-button {
+    background-color: #6A1B9A; /* Dark purple color */
+    color: #fff;
+    padding: 10px;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure it takes full width */
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .add-user-button:hover {
+    background-color: #4A148C; /* Darker shade on hover */
+  }
+  

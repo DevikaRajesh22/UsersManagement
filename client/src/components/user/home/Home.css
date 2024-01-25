@@ -1,0 +1,12 @@
+/* Home.css */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Adjust the gap between cards as needed */
+  }
+
+  body {
+    margin-top: 60px; /* Adjust the value based on your header height */
+    overflow-y: auto;
+  }

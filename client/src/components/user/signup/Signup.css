@@ -1,0 +1,68 @@
+/* Signup.css */
+
+.signup-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #43336b; /* Deeper shade of bluish purple for card background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the form horizontally */
+}
+
+.signup-container h2 {
+    text-align: center;
+    color: #e1e1e1; /* Light gray heading color */
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e1e1e1; /* Light gray label color */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #6b5499; /* Lighter bluish purple border */
+    border-radius: 4px;
+    background-color: #43336b; /* Matching input background */
+    color: #e1e1e1; /* Light gray text color */
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7f6fd3; /* Lighter bluish purple button color */
+    color: #e1e1e1; /* Light gray button text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #695bb5; /* Slightly darker bluish purple on hover */
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #9e9e9e; /* Light gray link color */
+}
+
+.login-link a {
+    color: #2196f3; /* Blue link color */
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

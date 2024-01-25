@@ -1,0 +1,38 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #2a2a2a;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is on top of other elements */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-message p {
+    margin: 0;
+    padding-right: 75rem;
+}
+
+.user-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.user-info a:hover {
+    color: #61dafb; /* Change color on hover */
+}
+
+.user-icon {
+    margin-left: 20px; /* Add margin to separate text and icon */
+}

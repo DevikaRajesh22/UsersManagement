@@ -1,0 +1,18 @@
+/* userProfile.css */
+
+.form-group button {
+    padding: 10px;
+    background-color: #6A1B9A; /* Deep purple color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #4A148C; /* Darker shade on hover */
+  }
+
+  
+  
