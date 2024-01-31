@@ -1,14 +1,14 @@
 import React from 'react';
-import Profile from '../../components/user/profile/profile';
+import UserProfile from '../../components/user/userProfile/userProfile';
 import Header from '../../components/user/header/Header';
 
-const ProfilePage = () => {
+const Profile = () => {
   return (
     <div>
       <Header/>
-      <Profile/>
+      <UserProfile/>
     </div>
   )
 }
 
-export default ProfilePage
+export default Profile

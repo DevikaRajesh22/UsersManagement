@@ -53,3 +53,25 @@
     background-color: #4A148C; /* Darker shade on hover */
   }
   
+  .search-container {
+  display: flex;
+  justify-content: center; /* Center-align child elements */
+  margin-bottom: 20px; /* Add margin to separate from the user list */
+}
+
+.search-input {
+  flex-grow: 1; /* Allow the input to grow to fill available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+  border-right: none; /* Remove right border */
+}
+
+.search-button {
+  background-color: #6A1B9A; /* Dark purple color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+  cursor: pointer;
+}

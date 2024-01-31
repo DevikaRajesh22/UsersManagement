@@ -1,41 +1,82 @@
-// userView.js
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa'; // Import icons
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import './userView.css';
+import Api from '../../../services/axios';
 
 const UserView = () => {
-  // Dummy user data (replace with your actual user data)
-  const users = [
-    { id: 1, name: 'User 1' },
-    { id: 2, name: 'User 2' },
-    { id: 3, name: 'User 3' },
-    // Add more users as needed
-  ];
+  const [searchQuery, setSearchQuery] = useState('');
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await Api.get('/admin/users');
+        setUsers(response.data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+    fetchUserData();
+  }, []);
 
   const handleAddUser = () => {
-    // Implement logic to add a new user
-    console.log('Add new user logic goes here');
+    navigate('/admin/addUser');
   };
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleDeleteUser = async (userId) => {
+    try {
+      const res=await Api.delete(`/admin/deleteUser/${userId}`);
+      setUsers(res.data.users);
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
+
+  const filteredUsers = searchQuery
+    ? users.filter((user) =>
+      user.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    : users;
 
   return (
     <div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search users..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="search-input"
+        />
+        <button className="search-button" onClick={handleSearch}>
+          Search
+        </button>
+      </div>
       <button className="add-user-button" onClick={handleAddUser}>
         Add New
       </button>
       <ul className="user-list">
-        {users.map((user) => (
-          <li key={user.id} className="user-card">
-            <span>{user.name}</span>
+        {filteredUsers.map((user) => (
+          <li key={user._id} className="user-card">
+            <span>Name : {user.name}</span>
             <div className="options">
-              <FaEdit className="edit-icon" />
-              <FaTrash className="delete-icon" />
+              <FaEdit className="edit-icon" onClick={()=>navigate(`/admin/edituser/${user._id}`)} />
+              <FaTrash
+                className="delete-icon"
+                onClick={() => handleDeleteUser(user._id)}
+              />
             </div>
           </li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default UserView;

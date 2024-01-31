@@ -7,12 +7,12 @@
     padding: 30px 20px;
     background-color: #2a2a2a;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the header is on top of other elements */
+    z-index: 1000;
 }
 
 .user-info {
@@ -22,7 +22,7 @@
 
 .welcome-message p {
     margin: 0;
-    padding-right: 2rem; /* Adjust the padding for better spacing */
+    padding-right: 2rem;
 }
 
 .user-info a {
@@ -32,23 +32,49 @@
 }
 
 .user-info a:hover {
-    color: #61dafb; /* Change color on hover */
+    color: #61dafb;
 }
 
 .user-icon {
-    margin-left: 20px; /* Add margin to separate text and icon */
+    margin-left: 20px;
 }
 
 .logout-button {
-    background-color: #6A1B9A; /* Dark purple color */
+    background-color: #6A1B9A;
     color: #fff;
     padding: 10px;
-    margin-left: 20px; /* Adjust margin as needed */
+    margin-left: 20px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
 }
 
 .logout-button:hover {
-    background-color: #4A148C; /* Darker shade on hover */
+    background-color: #4A148C;
+}
+
+/* Add margin-right to the LOGIN link */
+.login-link {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.logout-button {
+    background-color: #5f1282; /* Red color */
+    color: #fff;
+    padding: 8px 16px; /* Adjust padding as needed */
+    margin-left: 10px; /* Adjust margin as needed */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smoother hover effect */
+}
+
+.logout-button:hover {
+    background-color: #3e0857; /* Darker shade of red on hover */
+}
+
+/* Adjust styles for better button alignment */
+.user-actions {
+    display: flex;
+    align-items: center;
 }

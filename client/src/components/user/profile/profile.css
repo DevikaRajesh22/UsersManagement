@@ -1,0 +1,41 @@
+/* profile.css */
+
+.profile-container {
+    text-align: center;
+  }
+  
+  .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fills the circle */
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile-button {
+    display: inline-block; /* Ensure button takes up only the necessary space */
+    padding: 8px 16px; /* Adjust padding as needed */
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default link underline */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .edit-profile-button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+  .edit-profile-button:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  .edit-profile-link {
+    display: inline-block; /* Ensure link takes up only the necessary space */
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove default link underline */
+    cursor: pointer;
+  }
+  
